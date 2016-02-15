@@ -1,0 +1,135 @@
+<!--
+
+! emmett type html and tab 
+! put css in head NOT TITTLE!
+! JS must be right before end of the body, bootstrap js, jquery, app.js
+! bootstrap first thing is container
+! layout 2 col drag = side by side
+! bootstrap goes by container row then col
+! id = use JS naming conventions (camel case)
+! for in lable = tie to variable 
+! type = submit = JS form event (knows it's a button) (can only be submit or button ... JS need to listen for that)
+! inline block class = if no margin
+! 
+-->
+
+<html>
+<head>
+<title>
+saving calc
+</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class='container'>  <!-- adds padding and centers, 1st step in css -->
+	<div class='row'>
+		<div class='col-sm-12'> 
+
+				<h1 class='tittle'>Savings Calculator App</h1>
+				<!-- Tittle -->
+		</div>
+	</div>
+
+	<div class = 'row'>
+		<div class = 'col-sm-6'>
+<!-- inputs -->
+			<form>
+				<!-- savings goal input -->
+				<div class='form-group'>
+					<label for='savingGoal'> what is your goal?</label>
+					<input type ='text', class ='form-control' id='savingGoal'
+					placeholder = 'Home Reno'>	
+				</div>
+
+				<div class='row'> 
+					<div class = 'col-sm-6'>
+						<label for='goalMonth'> Month </label>
+							<select id ='goalMonth' class='form-control'>
+								<option> Jan </option>
+								<option> Feb </option>
+								<option> Mar </option>
+								<option> Apr </option>
+								<option> May </option>
+								<option> Jun </option>
+								<option> Jul </option>
+								<option> Aug </option>
+								<option> Sept </option>
+								<option> Oct </option>
+								<option> Nov </option>
+								<option> Dec </option>
+							</select>
+
+					</div>
+
+					<div class = 'col-sm-6'>
+						<div class='form-group'>
+							<label for='goalYear'> Year</label>
+							<input type ='text', class ='form-control' id='goalYear'
+							placeholder = 'YYYY'>	
+						</div>
+					</div>
+				</div>
+					<div class='form-group'>
+						<label for='savingAmount'> Goal Amount?</label> 
+						<span> 
+						<input type ='text', class ='form-control' id='savingAmount'
+						placeholder = '$0.00'>	
+						</span>
+					</div>
+
+					<div class='form-group'>
+						<label for='currentAmount'> Current Savings?</label> 
+						<span> 
+						<input type ='text', class ='form-control' id='currentAmount'
+						placeholder = '$0.00'>	
+						</span>
+					</div>
+
+					<div class='form-group'>
+						<label for='monthlyAmount'> Monthly Contribution?</label> 
+						<span> 
+						<input type ='text', class ='form-control' id='monthlyAmount'
+						placeholder = '$0.00'>	
+						</span>
+					</div>
+
+					<button type="submit" class="btn btn-success">Submit!</button>
+
+			</form>	
+
+		</div>
+<!-- outputs -->
+		<div class = 'col-sm-6'>
+			<h2 class = 'tittle'> Your Results </h2>
+			<p id = 'res'> 
+				lorem ipsum
+			</p>
+			
+			<a href="http://millionaire-labs.com/" type='button' class='btn btn-primary center'>Start Today!</a>
+
+
+			<!--<button type='button' class='btn btn-primary center'> Apply Today </button>-->
+
+		</div>
+
+
+	</div>
+
+
+</div>
+
+
+<!--<script type="text/javascript" src='JS/jquery-2.2.0.js'></script>-->
+
+<!--<script type="text/javascript" src='JS/bootstrap.js'></script>-->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+ 
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="JS/app.js"></script>
+
+
+</body>
+</html>
