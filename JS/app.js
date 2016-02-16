@@ -36,7 +36,6 @@ $(document).ready(
 		
 
 		//alert("loaded");
-
 		$('#monthlyAmount').on("focusout", function() {
 			alert('input change');
 				
@@ -106,17 +105,18 @@ function calc(formdata){
 	var ph = String(formdata.month)
 	//console.log('mon = ' + ph)
 	//console.log(monthConv[ph])
-	var goalDate= new Date(Number(formdata.yr), monthConv.ph, 0);
+	var goalDate= new Date(Number(formdata.yr), monthConv[ph], 0);
 	var today = new Date();
 	var curMon = today.getMonth();
 	var curYr = today.getYear();
 	
 	console.log(goalDate + " vs " + today);
-	var month = goalDate-today
-	alert(month)
+	var month = (goalDate-today)/2629746000
+	//console.log((goalDate-today)/2629746000)
+	console.log(month)
 	
 	
-	var month = 10; 
+
 	var totSav = 0;
 	var totSav = Number(month)*Number(formdata.monAmt) + Number(formdata.curAmt)
 
