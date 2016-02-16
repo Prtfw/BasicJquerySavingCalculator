@@ -23,10 +23,23 @@ $(document).ready(
  	
  	
 	function savinCalc(){
+
+			// alert('update data called')
+ 			// 	formdata = {
+			// 'goal': $('#savingGoal').val(),
+			// 'month': $('#goalMonth').val(),
+			// 'yr': $('#goalYear').val(),
+			// 'amt':$('#savingAmount').val(),
+			// 'curAmt':$('#currentAmount').val(),
+			// 'monAmt':$('#monthlyAmount').val(),
+			
 		
-		function upddata(){
-			alert('update data called')
- 			
+
+		//alert("loaded");
+
+		$('#monthlyAmount').on("focusout", function() {
+			alert('input change');
+				
  			formdata = {
 			'goal': $('#savingGoal').val(),
 			'month': $('#goalMonth').val(),
@@ -34,19 +47,10 @@ $(document).ready(
 			'amt':$('#savingAmount').val(),
 			'curAmt':$('#currentAmount').val(),
 			'monAmt':$('#monthlyAmount').val(),
+ 			};
 			
-		};
-						//alert(formdata.month)
-						//console.log(formdata)
-			return formdata
- 	}
-		//alert("loaded");
-
-		$('#monthlyAmount').on("focusout", function() {
-			alert('input change');
-		 var formdata =	upddata();
-		 		console.log('backfrom updatedata');
-				console.log('main form data: ' + formdata);
+		 		//console.log('backfrom updatedata');
+				//console.log( formdata);
 			//	alert(monthConv.formdata.month);
 				var res = calc(formdata);
 				
@@ -98,12 +102,16 @@ $(document).ready(
 function calc(formdata){
 	console.log("calc called");
 	//alert(monthConv.formdata.month);
-	
-	var goalDate= new Date(Number(formdata.yr), monthConv.formdata.month, 0);
+	console.log(formdata.month)
+	var ph = String(formdata.month)
+	//console.log('mon = ' + ph)
+	//console.log(monthConv[ph])
+	var goalDate= new Date(Number(formdata.yr), monthConv.ph, 0);
 	var today = new Date();
 	var curMon = today.getMonth();
 	var curYr = today.getYear();
-	alert(goalDate + " vs " + today);
+	
+	console.log(goalDate + " vs " + today);
 	var month = goalDate-today
 	alert(month)
 	
