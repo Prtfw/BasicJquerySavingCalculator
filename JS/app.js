@@ -126,10 +126,10 @@ function calc(formdata){
 	
 
 	if (totSav < Number(formdata.amt)){
-		res=false
+		res="No Dice! Try saving more each month."
 
 	}
-	else{res = true; }
+	else{res ="Boom Done! enjoy your " + formdata.goal; }
 
 	//res = true
 	//alert(res);
