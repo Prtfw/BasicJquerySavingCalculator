@@ -23,37 +23,40 @@ $(document).ready(
  	
  	
 	function savinCalc(){
-
-			// alert('update data called')
- 			// 	formdata = {
-			// 'goal': $('#savingGoal').val(),
-			// 'month': $('#goalMonth').val(),
-			// 'yr': $('#goalYear').val(),
-			// 'amt':$('#savingAmount').val(),
-			// 'curAmt':$('#currentAmount').val(),
-			// 'monAmt':$('#monthlyAmount').val(),
-			
-		
-
-		//alert("loaded");
-		$('#monthlyAmount').on("focusout", function() {
-			alert('input change');
-				
+	
+	function upddata(){
+			alert('update data called')
  			formdata = {
 			'goal': $('#savingGoal').val(),
 			'month': $('#goalMonth').val(),
 			'yr': $('#goalYear').val(),
 			'amt':$('#savingAmount').val(),
 			'curAmt':$('#currentAmount').val(),
-			'monAmt':$('#monthlyAmount').val(),
- 			};
+			'monAmt':$('#monthlyAmount').val(),}
+	}
+		
+
+		//alert("loaded");
+		$('#monthlyAmount').on("focusout", function() {
+			alert('input change');
+				
+ 		// 	formdata = {
+			// 'goal': $('#savingGoal').val(),
+			// 'month': $('#goalMonth').val(),
+			// 'yr': $('#goalYear').val(),
+			// 'amt':$('#savingAmount').val(),
+			// 'curAmt':$('#currentAmount').val(),
+			// 'monAmt':$('#monthlyAmount').val(),
+ 		// 	};
 			
 		 		//console.log('backfrom updatedata');
 				//console.log( formdata);
 			//	alert(monthConv.formdata.month);
+			
+				upddata();
 				var res = calc(formdata);
 				
-
+				console.log('done from update')
 				
 				//console.log('*'+res)
 				$('#res').text(res);
